@@ -1,3 +1,10 @@
+function RenderContent()
+{
+    div_content = document.getElementById("content");
+    div_content.innerHTML =" <form  action=\"?time=time\" >Time in s:<br><input type=\"text\" name=\"time\" value=\"0\"><br><input type=\"submit\" value=\"Start\"><p>Countdown timer:<p id=\"cdown\">-</p></p></form> <form action=\"/StopTimer\">Off led:<input type=\"submit\" value=\"Stop\"></form>";
+}
+
+
 function OnTimerStart()
 {
     const queryString = window.location.search;
