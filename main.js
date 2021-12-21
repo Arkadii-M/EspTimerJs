@@ -128,7 +128,7 @@ function OnPageTimerEnd()
 {
     el = document.getElementById("cdown");
     el.innerHTML = "off";
-    window.navigator.vibrate(200);
+    window.navigator.vibrate(2000);
     console.log("Timer up!")
 }
 // function OnTimerStart()
