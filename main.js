@@ -113,6 +113,7 @@ function StopPageTimer()
     el.innerHTML = "off";
     exp_btn = document.getElementById("StartTimer");
     exp_btn.disabled = true;
+    GetLedStatus();
 }
 function RenderPageTimer()
 {
