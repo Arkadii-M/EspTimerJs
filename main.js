@@ -37,6 +37,8 @@ function RefreshPageTimer()
 }
 function StartTimer()
 {
+    exp_btn = document.getElementById("StartTimer");
+    exp_btn.disabled = true;
     expose_time = document.getElementById("expose_time");
     fetch(host_ip + "api/StartTimer",{
         mode:'no-cors',
@@ -64,6 +66,8 @@ function StopTimer()
     .then((data) => {
         console.log(data);
     });
+    exp_btn = document.getElementById("StartTimer");
+    exp_btn.disabled = false;
     GetLedStatus();
     StopPageTimer();
 }
@@ -128,7 +132,7 @@ function OnPageTimerEnd()
 {
     el = document.getElementById("cdown");
     el.innerHTML = "off";
-    window.navigator.vibrate(2000);
+    window.navigator.vibrate(200);
     console.log("Timer up!")
 }
 // function OnTimerStart()
