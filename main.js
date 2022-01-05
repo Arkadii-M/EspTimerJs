@@ -3,6 +3,8 @@ host_ip = 'http://192.168.1.7/';
 function RenderContent()
 {
     //Add handlers
+    exp_time = document.getElementById("expose_time");
+    expose_time.value  =90;
     exp_btn = document.getElementById("StartTimer")
     stop_btn = document.getElementById("StopTimer")
     exp_btn.onclick = StartTimer;
