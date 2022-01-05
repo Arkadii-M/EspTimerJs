@@ -68,8 +68,6 @@ function StopTimer()
     .then((data) => {
         console.log(data);
     });
-    exp_btn = document.getElementById("StartTimer");
-    exp_btn.disabled = false;
     GetLedStatus();
     StopPageTimer();
 }
@@ -113,6 +111,8 @@ function StopPageTimer()
     clearInterval(timer_interval);
     el = document.getElementById("cdown");
     el.innerHTML = "off";
+    exp_btn = document.getElementById("StartTimer");
+    exp_btn.disabled = true;
 }
 function RenderPageTimer()
 {
